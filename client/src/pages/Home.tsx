@@ -195,10 +195,14 @@ export default function Home() {
             </div>
 
             <div className="hero-visual-wrap">
-              <div className="hero-visual">
+              <div
+                className="hero-visual"
+                role="img"
+                aria-label="Casa com piscina e vista para o mar"
+              >
                 <img
-                  src="/manus-storage/hero-coastal-home_b75bc2d2.jpg"
-                  alt="Casa contemporânea com piscina em frente ao mar"
+                  src="/images/hero-piscina.jpg"
+                  alt="Casa com piscina e vista para o mar"
                 />
                 <div className="image-wash" />
                 <div className="visual-caption">
