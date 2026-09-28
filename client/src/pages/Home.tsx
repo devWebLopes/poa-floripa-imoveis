@@ -201,7 +201,7 @@ export default function Home() {
                 aria-label="Casa com piscina e vista para o mar"
               >
                 <img
-                  src="/images/hero-piscina.jpg"
+                  src="/images/hero-piscina.jpeg"
                   alt="Casa com piscina e vista para o mar"
                 />
                 <div className="image-wash" />
