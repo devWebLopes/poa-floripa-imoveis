@@ -19,6 +19,24 @@ const phoneHref = "tel:+5551985238208";
 const whatsappHref =
   "https://wa.me/5551985238208?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Poa%20Floripa%20Im%C3%B3veis.";
 
+const faqs = [
+  {
+    question: "Em quais regiões a Poa Floripa Imóveis atua?",
+    answer:
+      "Atuamos em Porto Alegre, Florianópolis e no litoral de Santa Catarina, com atendimento próximo e orientação em cada etapa.",
+  },
+  {
+    question: "Posso falar com a equipe pelo WhatsApp?",
+    answer:
+      "Sim. Você pode chamar no WhatsApp pelo número (51) 98523-8208 e contar o que está buscando.",
+  },
+  {
+    question: "A Poa Floripa Imóveis atende quem quer comprar e vender?",
+    answer:
+      "Sim. Conversamos sobre o seu objetivo para entender o momento e orientar a próxima decisão com clareza.",
+  },
+];
+
 function WhatsAppLogo() {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" className="whatsapp-logo">
@@ -60,7 +78,11 @@ export default function Home() {
     <div className="min-h-screen overflow-x-hidden bg-[#f6fbfa] text-[#12343a]">
       <header className="absolute inset-x-0 top-0 z-50">
         <div className="site-shell flex items-center justify-between py-5 lg:py-7">
-          <a href="#inicio" className="brand-lockup" aria-label="Poa Floripa Imóveis - início">
+          <a
+            href="#inicio"
+            className="brand-lockup"
+            aria-label="Poa Floripa Imóveis - início"
+          >
             <span className="brand-mark" aria-hidden="true">
               <span />
               <span />
@@ -71,11 +93,25 @@ export default function Home() {
             </span>
           </a>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
-            <a href="#atuacao" className="nav-link">Nossa atuação</a>
-            <a href="#presenca" className="nav-link">Onde estamos</a>
-            <a href="#contato" className="nav-link">Contato</a>
-            <a href={whatsappHref} target="_blank" rel="noreferrer" className="nav-cta">
+          <nav
+            className="hidden items-center gap-8 lg:flex"
+            aria-label="Navegação principal"
+          >
+            <a href="#atuacao" className="nav-link">
+              Nossa atuação
+            </a>
+            <a href="#presenca" className="nav-link">
+              Onde estamos
+            </a>
+            <a href="#contato" className="nav-link">
+              Contato
+            </a>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="nav-cta"
+            >
               Fale conosco <ArrowUpRight size={15} strokeWidth={2.4} />
             </a>
           </nav>
@@ -85,7 +121,7 @@ export default function Home() {
             className="mobile-menu-button lg:hidden"
             aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((open) => !open)}
+            onClick={() => setMenuOpen(open => !open)}
           >
             {menuOpen ? <X size={21} /> : <Menu size={21} />}
           </button>
@@ -93,10 +129,22 @@ export default function Home() {
 
         {menuOpen && (
           <div className="mobile-menu lg:hidden">
-            <a href="#atuacao" onClick={closeMenu}>Nossa atuação</a>
-            <a href="#presenca" onClick={closeMenu}>Onde estamos</a>
-            <a href="#contato" onClick={closeMenu}>Contato</a>
-            <a href={whatsappHref} target="_blank" rel="noreferrer" onClick={closeMenu} className="mobile-menu-cta">
+            <a href="#atuacao" onClick={closeMenu}>
+              Nossa atuação
+            </a>
+            <a href="#presenca" onClick={closeMenu}>
+              Onde estamos
+            </a>
+            <a href="#contato" onClick={closeMenu}>
+              Contato
+            </a>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              onClick={closeMenu}
+              className="mobile-menu-cta"
+            >
               Fale conosco <ArrowUpRight size={15} />
             </a>
           </div>
@@ -116,11 +164,17 @@ export default function Home() {
                 O lugar certo começa com uma <em>boa conversa.</em>
               </h1>
               <p className="hero-copy">
-                A Poa Floripa Imóveis aproxima você de oportunidades em Porto Alegre,
-                Florianópolis e no litoral de Santa Catarina — com clareza, cuidado e presença.
+                A Poa Floripa Imóveis aproxima você de oportunidades em Porto
+                Alegre, Florianópolis e no litoral de Santa Catarina — com
+                clareza, cuidado e presença.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a href={whatsappHref} target="_blank" rel="noreferrer" className="button-primary">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button-primary"
+                >
                   Quero conversar <ArrowUpRight size={17} />
                 </a>
                 <a href="#atuacao" className="button-ghost">
@@ -129,9 +183,14 @@ export default function Home() {
               </div>
               <div className="hero-proof">
                 <div className="proof-avatars" aria-hidden="true">
-                  <span>PF</span><span>+</span>
+                  <span>PF</span>
+                  <span>+</span>
                 </div>
-                <p>Atendimento próximo<br /><strong>para decisões importantes.</strong></p>
+                <p>
+                  Atendimento próximo
+                  <br />
+                  <strong>para decisões importantes.</strong>
+                </p>
               </div>
             </div>
 
@@ -144,7 +203,9 @@ export default function Home() {
                 <div className="image-wash" />
                 <div className="visual-caption">
                   <span className="caption-label">PRESENÇA LOCAL</span>
-                  <span className="caption-place"><MapPin size={13} /> Sul do Brasil</span>
+                  <span className="caption-place">
+                    <MapPin size={13} /> Sul do Brasil
+                  </span>
                 </div>
               </div>
               <div className="hero-stamp" aria-hidden="true">
@@ -154,19 +215,28 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hero-bottom-line" aria-hidden="true"><span /> <span /></div>
+          <div className="hero-bottom-line" aria-hidden="true">
+            <span /> <span />
+          </div>
         </section>
 
         <section id="atuacao" className="section-pad bg-[#f6fbfa]">
           <div className="site-shell">
             <div className="section-heading grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
               <div>
-                <div className="eyebrow eyebrow-dark"><span className="eyebrow-dot" /> Nosso jeito</div>
-                <h2 className="section-title">Imobiliária,<br /><em>sem complicação.</em></h2>
+                <div className="eyebrow eyebrow-dark">
+                  <span className="eyebrow-dot" /> Nosso jeito
+                </div>
+                <h2 className="section-title">
+                  Imobiliária,
+                  <br />
+                  <em>sem complicação.</em>
+                </h2>
               </div>
               <p className="section-lead">
-                Comprar, vender ou encontrar um novo endereço é uma decisão grande. Nosso papel é
-                deixar o caminho mais claro, humano e seguro — com atenção aos detalhes que fazem diferença.
+                Comprar, vender ou encontrar um novo endereço é uma decisão
+                grande. Nosso papel é deixar o caminho mais claro, humano e
+                seguro — com atenção aos detalhes que fazem diferença.
               </p>
             </div>
 
@@ -185,29 +255,69 @@ export default function Home() {
               ))}
             </div>
           </div>
+          <ul
+            className="mt-10 grid gap-3 text-sm text-[#557277] md:grid-cols-3"
+            aria-label="Diferenciais do atendimento"
+          >
+            <li className="rounded-xl border border-[#d8ebe7] bg-white px-5 py-4">
+              Atendimento próximo e claro
+            </li>
+            <li className="rounded-xl border border-[#d8ebe7] bg-white px-5 py-4">
+              Leitura cuidadosa do seu objetivo
+            </li>
+            <li className="rounded-xl border border-[#d8ebe7] bg-white px-5 py-4">
+              Presença local em duas capitais
+            </li>
+          </ul>
         </section>
 
         <section id="presenca" className="presence-section">
           <div className="site-shell grid gap-12 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-20">
-            <div className="presence-map" aria-label="Áreas de atuação: Porto Alegre, Florianópolis e litoral de Santa Catarina">
+            <div
+              className="presence-map"
+              aria-label="Áreas de atuação: Porto Alegre, Florianópolis e litoral de Santa Catarina"
+            >
               <div className="map-grid" aria-hidden="true" />
               <div className="map-water" aria-hidden="true" />
               <div className="map-route route-one" aria-hidden="true" />
               <div className="map-route route-two" aria-hidden="true" />
-              <div className="map-pin pin-poa"><span>POA</span><i /></div>
-              <div className="map-pin pin-floripa"><span>FLORIPA</span><i /></div>
-              <div className="map-note"><MapPin size={14} /> Santa Catarina & Rio Grande do Sul</div>
+              <div className="map-pin pin-poa">
+                <span>POA</span>
+                <i />
+              </div>
+              <div className="map-pin pin-floripa">
+                <span>FLORIPA</span>
+                <i />
+              </div>
+              <div className="map-note">
+                <MapPin size={14} /> Santa Catarina & Rio Grande do Sul
+              </div>
             </div>
             <div>
-              <div className="eyebrow eyebrow-dark"><span className="eyebrow-dot" /> Onde estamos</div>
-              <h2 className="section-title">Duas cidades.<br /><em>Um olhar próximo.</em></h2>
+              <div className="eyebrow eyebrow-dark">
+                <span className="eyebrow-dot" /> Onde estamos
+              </div>
+              <h2 className="section-title">
+                Duas cidades.
+                <br />
+                <em>Um olhar próximo.</em>
+              </h2>
               <p className="section-lead mt-6">
-                De Porto Alegre a Florianópolis, levamos conhecimento local e um atendimento que
-                respeita o seu tempo. Porque o melhor imóvel também precisa fazer sentido para a sua vida.
+                De Porto Alegre a Florianópolis, levamos conhecimento local e um
+                atendimento que respeita o seu tempo. Porque o melhor imóvel
+                também precisa fazer sentido para a sua vida.
               </p>
               <div className="location-list">
-                <div><span>01</span><strong>Porto Alegre</strong><small>Rio Grande do Sul</small></div>
-                <div><span>02</span><strong>Florianópolis</strong><small>Santa Catarina</small></div>
+                <div>
+                  <span>01</span>
+                  <strong>Porto Alegre</strong>
+                  <small>Rio Grande do Sul</small>
+                </div>
+                <div>
+                  <span>02</span>
+                  <strong>Florianópolis</strong>
+                  <small>Santa Catarina</small>
+                </div>
               </div>
             </div>
           </div>
@@ -217,27 +327,81 @@ export default function Home() {
           <div className="contact-glow" aria-hidden="true" />
           <div className="site-shell relative z-10 grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
             <div>
-              <div className="eyebrow eyebrow-light"><span className="eyebrow-dot light" /> Vamos conversar</div>
-              <h2 className="contact-title">Seu próximo<br /><em>endereço começa aqui.</em></h2>
-              <p className="contact-copy">Conte o que você está buscando. A gente responde com atenção.</p>
-              <a href={whatsappHref} target="_blank" rel="noreferrer" className="button-primary button-primary-light">
+              <div className="eyebrow eyebrow-light">
+                <span className="eyebrow-dot light" /> Vamos conversar
+              </div>
+              <h2 className="contact-title">
+                Seu próximo
+                <br />
+                <em>endereço começa aqui.</em>
+              </h2>
+              <p className="contact-copy">
+                Conte o que você está buscando. A gente responde com atenção.
+              </p>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="button-primary button-primary-light"
+              >
                 Chamar no WhatsApp <ArrowUpRight size={17} />
               </a>
             </div>
             <div className="contact-details">
               <a href={phoneHref} className="contact-row">
-                <span className="contact-icon"><Phone size={17} /></span>
-                <span><small>Telefone / WhatsApp</small><strong>{phoneDisplay}</strong></span>
+                <span className="contact-icon">
+                  <Phone size={17} />
+                </span>
+                <span>
+                  <small>Telefone / WhatsApp</small>
+                  <strong>{phoneDisplay}</strong>
+                </span>
                 <ArrowUpRight className="contact-arrow" size={18} />
               </a>
               <div className="contact-row contact-row-static">
-                <span className="contact-icon"><Building2 size={17} /></span>
-                <span><small>Razão social</small><strong>TSR Assessoria Empresarial</strong></span>
+                <span className="contact-icon">
+                  <Building2 size={17} />
+                </span>
+                <span>
+                  <small>Razão social</small>
+                  <strong>TSR Assessoria Empresarial</strong>
+                </span>
               </div>
               <div className="contact-row contact-row-static">
-                <span className="contact-icon"><MapPin size={17} /></span>
-                <span><small>Base administrativa</small><strong>Florianópolis · SC</strong></span>
+                <span className="contact-icon">
+                  <MapPin size={17} />
+                </span>
+                <span>
+                  <small>Base administrativa</small>
+                  <strong>Florianópolis · SC</strong>
+                </span>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="perguntas" className="section-pad bg-[#eef8f5]">
+          <div className="site-shell">
+            <div className="eyebrow">
+              <span className="eyebrow-dot" /> Perguntas frequentes
+            </div>
+            <h2 className="section-title mt-5 max-w-2xl">
+              Informação clara para você avançar com segurança.
+            </h2>
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
+              {faqs.map(faq => (
+                <article
+                  key={faq.question}
+                  className="rounded-2xl border border-[#d1e8e2] bg-white p-6"
+                >
+                  <h3 className="text-lg font-semibold leading-snug text-[#12343a]">
+                    {faq.question}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-[#5f777b]">
+                    {faq.answer}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -247,20 +411,43 @@ export default function Home() {
         <div className="site-shell flex flex-col gap-7 py-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <a href="#inicio" className="brand-lockup footer-brand">
-              <span className="brand-mark" aria-hidden="true"><span /><span /></span>
-              <span><strong>Poa Floripa</strong><small>IMÓVEIS</small></span>
+              <span className="brand-mark" aria-hidden="true">
+                <span />
+                <span />
+              </span>
+              <span>
+                <strong>Poa Floripa</strong>
+                <small>IMÓVEIS</small>
+              </span>
             </a>
-            <p className="footer-tagline">Presença local. Escolhas com sentido.</p>
+            <p className="footer-tagline">
+              Presença local. Escolhas com sentido.
+            </p>
           </div>
           <div className="footer-meta">
             <div className="footer-legal">
-              <span><Check size={13} /> CNPJ 49.975.398/0001-70</span>
-              <span><Check size={13} /> Responsável: Tiago dos Santos Rosin</span>
-              <span><Check size={13} /> Rua Procópio Manoel Pires, 84 · Florianópolis/SC</span>
+              <span>
+                <Check size={13} /> CNPJ 49.975.398/0001-70
+              </span>
+              <span>
+                <Check size={13} /> Responsável: Tiago dos Santos Rosin
+              </span>
+              <span>
+                <Check size={13} /> Rua Procópio Manoel Pires, 84 ·
+                Florianópolis/SC
+              </span>
             </div>
             <div className="flex items-center justify-between gap-6 pt-4 text-xs text-[#6b8588] lg:justify-end">
               <span>© 2026 Poa Floripa Imóveis</span>
-              <a href={whatsappHref} target="_blank" rel="noreferrer" className="footer-social" aria-label="Falar pelo WhatsApp"><Instagram size={15} /></a>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="footer-social"
+                aria-label="Falar pelo WhatsApp"
+              >
+                <Instagram size={15} />
+              </a>
             </div>
           </div>
         </div>
